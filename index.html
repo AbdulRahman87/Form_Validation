@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation </title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <style>
+        #form-body {
+            border-radius: 15px;
+        }
+
+        #sign {
+            border-radius: 10px;
+            background-color: rgb(46, 165, 46);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-3">Signup Please.</h1>
+    <div class="container">
+        <div id="form-body" class="container shadow-lg my-2 p-4 mt-5 bg-body">
+            <div id="sign" class="text-center fs-2 mb-5 p-4 text-light ">
+                Enter Few Details.
+            </div>
+            <form class="row g-3" action='successful.php' method='post'>
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name:</label>
+                    <input placeholder="Enter you name" type="text" class="form-control" name="name" id="name" required>
+                    <small id="namevalid" class="form-text text-danger invalid-feedback">Username must be between 5-15
+                        characters long and should not start with a number and should not end with white spaces(only one
+                        consecutive space).</small>
+                </div>
+                <div class="col-md-6">
+                    <label for="number" class="form-label">Phone-no:</label>
+                    <input placeholder="Enter your phone number" type="number" class="form-control" name="phone"
+                        id="number" maxlength="10" required>
+                    <small id="phonevalid" class="form-text text-danger invalid-feedback">Phone number must contain 10
+                        digits.</small>
+                </div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input placeholder="Enter your e-mail" type="email" class="form-control" name="email" id="email"
+                        required>
+                    <small id="emailvalid" class="form-text text-danger invalid-feedback">Please Enter a valid
+                        Email.</small>
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password:</label>
+                    <input placeholder="Create your password" type="password" class="form-control" name="password"
+                        id="password" maxlength='8' required>
+                    <small id="passwordvalid" class="form-text text-danger invalid-feedback">Password must contains
+                        atleast
+                        one capital Alphabet.</small>
+                </div>
+                <div class="col-md-6">
+                    <label for="cpassword" class="form-label">Confirm Password:</label>
+                    <input placeholder="Confirm your password" type="password" class="form-control" name="cpassword"
+                        id="cpassword" maxlength='8' required>
+                    <small id="cpasswordvalid" class="form-text text-danger invalid-feedback">Password must be
+                        same.</small>
+                </div>
+                <div class="col-12">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St"
+                        required>
+                </div>
+                <div class="col-md-6">
+                    <label for="city" class="form-label">City</label>
+                    <input placeholder="Ex. Mumbai, Chennai, Lucknow, Kanpur" type="text" class="form-control"
+                        name="city" id="city" required>
+                    <small id="cityvalid" class="form-text text-danger invalid-feedback">City name should start with
+                        capital letter & should not contain any number(only one consecutive space).</small>
+                </div>
+                <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <input placeholder="Ex. UttarPradesh, Maharashtra" type="text" class="form-control" name="state"
+                        id="state" required>
+                    <small id="cityvalid" class="form-text text-danger invalid-feedback">State name should start with
+                        capital letter & should not contain any number(only one consecutive space).</small>
+                </div>
+                <div class="col-md-2">
+                    <label for="pin" class="form-label">PIN Code</label>
+                    <input placeholder='Area code' type="number" class="form-control" name="pin" id="pin" required>
+                </div>
+                <div class="mt-5">
+                    <input type="submit" value="Register!" class="btn btn-primary d-block m-auto col-md-6 fs-5"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="JS/js.js"></script>
+
+</html>
